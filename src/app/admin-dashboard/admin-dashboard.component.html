@@ -1,0 +1,41 @@
+<div class="dashboard">
+  <header>
+    <h1>Admin Dashboard</h1>
+    <div class="actions">
+
+      <button class="btn btn-add">Ajouter Utilisateur</button>
+      <button class="btn btn-edit">Modifier Utilisateur</button>
+      <button class="btn btn-delete">Supprimer Utilisateur</button>
+        <button class="btn btn-logout" (click)="logout()">Déconnexion</button>
+    </div>
+
+  </header>
+
+  <table class="user-table">
+    <thead>
+    <tr>
+      <th>Nom Utilisateur</th>
+      <th>Role</th>
+      <th>Password</th>
+      <th>Compte Expire</th>
+      <th>Compte Actif</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.username }}</td>
+      <td>{{ user.roles }}</td>
+      <td>{{ user.password }}</td>
+      <td>{{ user.accountNonExpired }}</td>
+      <td>{{ user.accountNonLocked }}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="btn btn-edit-action">Edit</button>
+          <button class="btn btn-delete-action">Delete</button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

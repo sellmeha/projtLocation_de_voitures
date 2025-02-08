@@ -1,0 +1,15 @@
+<div *ngIf="loading" class="loading-indicator">
+  <p>Chargement des détails de l'utilisateur...</p>
+</div>
+
+<div *ngIf="error" class="error-message">
+  <p>{{ error }}</p>
+</div>
+
+<div *ngIf="user" class="user-details">
+  <h1>Bienvenue {{user.username}}</h1>
+  <p><strong>Nom d'utilisateur :</strong> {{ user.username }}</p>
+  <p><strong>Rôle :</strong> {{ user.roles }}</p>
+  <p><strong>Compte actif :</strong> {{ user.accountNonLocked ? 'Oui' : 'Non' }}</p>
+  <p><strong>Compte expiré :</strong> {{ user.accountNonExpired ? 'Non' : 'Oui' }}</p>
+</div>
