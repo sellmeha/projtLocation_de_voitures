@@ -1,0 +1,134 @@
+/* Styles généraux */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: left;
+}
+
+table th {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+table tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+table tbody tr:hover {
+  background-color: #f1f5f9;
+  transform: scale(1.02);
+}
+
+table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Loading spinner */
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #4a90e2;
+}
+
+.loading-indicator::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border: 3px solid #4a90e2;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+/* User details section */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f9fafe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.user-details p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.user-details strong {
+  color: #4a90e2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

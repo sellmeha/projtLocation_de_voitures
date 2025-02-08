@@ -1,0 +1,17 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+api.module.ts
+api/api.ts
+api/authController.service.ts
+api/userController.service.ts
+configuration.ts
+encoder.ts
+git_push.sh
+index.ts
+model/authRequestDTO.ts
+model/grantedAuthority.ts
+model/models.ts
+model/users.ts
+param.ts
+variables.ts
